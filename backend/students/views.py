@@ -20,7 +20,6 @@ class StudentView(APIView):
         if serializer.is_valid():
             serializer.save()
             return JsonResponse("Student Account Created", safe=False)
-        
         return JsonResponse("Failed Account Registration", safe=False)
     
 
@@ -55,13 +54,29 @@ class StudentView(APIView):
         return Response(serializer.data)
         #will return data in JSON format
 
-    #this is the patch/add/put function
+    #this is the edit function
     def put(self, request, pk=None):
         student_to_update = Student.objects.get(studentID=pk)
-        serializer = StudentSerializer(instances=student_to_update, data=request.data, partial=True)
+        serializer = StudentSerializer(instance=student_to_update, data=request.data, partial=True)
+        #the instance tells the serializer which object need to be called and updated
+        #data=request.data: This passes the new data from the request to the serializer so it knows what changes to make.
+        #partial=True: This allows you to update only part of the student data (not all fields need to be provided).
 
+        #if the above is valid the changes will be saved but if not an error message will be shown
+        if serializer.is_valid():
+            serializer.save()
+            return JsonResponse("Student Account Updated Successfully", safe=False)
+
+        return JsonResponse("Failed To Update Student Account")
     
+    #this is delete function
+    def delete(self, request, pk=None):
+        student_to_delete = Student.objects.get(studentID=pk)
+        student_to_delete.delete()
+        
+        return JsonResponse("Student Account Deleted Successfully", safe=False)
 
+        
 
 
 
