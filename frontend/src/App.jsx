@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Navigation from './Components/Navigation.jsx'
 import './App.css'
 
 function App() {
@@ -6,7 +7,8 @@ function App() {
 
   return (
     <>
-      <h1>Student Management System</h1>
+    <Navigation/>
+    
     </>
   )
 }
