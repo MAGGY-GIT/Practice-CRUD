@@ -1,7 +1,5 @@
 import React from "react"
-import Navbar from 'react-bootstrap/Navbar'
-import Nav from 'react-bootstrap/Nav'
-import logo from '../static/images/logo.png'
+import { FaGraduationCap } from "react-icons/fa";
 import '../App.css'
 // this file adds any styling from the css fileB
 
@@ -14,8 +12,7 @@ const Navigation = () => {
 
             <Navbar className="">
                 <Navbar.Brand href="#">
-                    <img alt="" src={logo}
-                        className=" app-logo"/>
+                    <FaGraduationCap className=" app-logo"/>
                         Student Management System
                     
                 </Navbar.Brand>
