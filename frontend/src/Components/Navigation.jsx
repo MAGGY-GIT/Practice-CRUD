@@ -12,11 +12,11 @@ import { ImProfile } from "react-icons/im";
 const Navigation = () => {
     return (
         <div className="overflow-hidden">
-            <nav className="py-5 pl-7 bg-slate-400">
+            <nav className="py-5 pl-7 bg-blue-900">
 
-                <div className="flex text-2xl font-bold font-serif">
+                <div className=" text-white flex text-2xl font-bold font-serif items-center">
                     <FaGraduationCap className=" w-10 h-10 mr-3"/>
-                    <a href="#">Student Management System</a>
+                    <a href="#" className="">Student Management System</a>
                 </div>
                 
             </nav>
@@ -26,21 +26,21 @@ const Navigation = () => {
                 <div class=" h-full px-3 py-4 bg-slate-400 ">
                     <ul class="font-medium">
                         <li>
-                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 dark:hover:bg-gray-700 font-bold text-base group">
+                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 hover:text-white dark:hover:bg-gray-700 font-bold text-base group">
                              <span><GoHomeFill className="w-6 h-6"/></span>
                              <span class="ms-3">Home</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 dark:hover:bg-gray-700 font-bold text-base group">
+                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 hover:text-white dark:hover:bg-gray-700 font-bold text-base group">
                                 <span><FaList className="w-6 h-6"/></span>
                                 <span class="flex-1 ms-3 whitespace-nowrap">List</span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 dark:hover:bg-gray-700 font-bold text-base group">
+                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-white font-bold text-base group">
                                 <span><ImProfile className="w-6 h-6"/></span>
                                 <span class="flex-1 ms-3 whitespace-nowrap">Profile</span>
                             
