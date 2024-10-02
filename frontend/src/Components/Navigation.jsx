@@ -1,70 +1,46 @@
 import React from "react"
 import '../App.css'
-// this file adds any styling from the css file
 import { FaGraduationCap } from "react-icons/fa"
 import { GoHomeFill } from "react-icons/go"
 import { FaList } from "react-icons/fa"
-import { ImProfile } from "react-icons/im";
-
-
-
+import { ImProfile } from "react-icons/im"
 
 const Navigation = () => {
-    return (
-        <div className="overflow-hidden">
-            <nav className="py-5 pl-7 bg-blue-900">
+  return (
+    <div className="flex justify-between bg-slate-600 text-white ">
+      <div className="logo inline-block py-5 mx-10 ">
+        <a href="#" className="font-bold flex items-center p-3">
+          <FaGraduationCap className=" w-10 h-10 mr-2"/>
+          <span className="text-2xl">Student Management System</span>
+        </a>
+      </div>
 
-                <div className=" text-white flex text-2xl font-bold font-serif items-center">
-                    <FaGraduationCap className=" w-10 h-10 mr-3"/>
-                    <a href="#" className="">Student Management System</a>
-                </div>
-                
-            </nav>
+      <div className="links mr-12 mt-7">
+        <ul className="flex">
+          <li className=" hover:text-black  hover:bg-white rounded mr-3 p-2">
+            <a href="#" className="flex items-center">
+              <GoHomeFill className="mr-1 w-5 h-6 "/>
+              <span className="text-xl">Home</span>
+            </a>
+          </li>
 
-            {/* creating the side-navbar */}
-            <aside id="default-sidebar" class=" top-0 left-0 w-60 h-screen font-serif float-left" aria-label="Sidebar">
-                <div class=" h-full px-3 py-4 bg-slate-400 ">
-                    <ul class="font-medium">
-                        <li>
-                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 hover:text-white dark:hover:bg-gray-700 font-bold text-base group">
-                             <span><GoHomeFill className="w-6 h-6"/></span>
-                             <span class="ms-3">Home</span>
-                            </a>
-                        </li>
+          <li className=" hover:text-black  hover:bg-white rounded mr-3 p-2">
+            <a href="#" className="flex items-center">
+              <FaList className="mr-1 w-5 h-6 "/>
+              <span className="text-xl">Students List</span>
+            </a>
+          </li>
 
-                        <li>
-                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 hover:text-white dark:hover:bg-gray-700 font-bold text-base group">
-                                <span><FaList className="w-6 h-6"/></span>
-                                <span class="flex-1 ms-3 whitespace-nowrap">List</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-white font-bold text-base group">
-                                <span><ImProfile className="w-6 h-6"/></span>
-                                <span class="flex-1 ms-3 whitespace-nowrap">Profile</span>
-                            
-                            </a>
-                        </li>
-
-                        {/* <li>
-                            <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg  hover:bg-gray-100 dark:hover:bg-gray-700 font-bold text-base group">
-                            
-                                <span class="flex-1 ms-3 whitespace-nowrap">Users</span>
-                            </a>
-                        </li> */}
-
-
-                        
-                    </ul>
-                </div>
-            </aside>
-
-
-        </div>
-    )
-        
-
+          <li className=" hover:text-black  hover:bg-white rounded mr-3 p-2">
+            <a href="#" className="flex items-center">
+              <ImProfile className="mr-1 w-5 h-6 "/>
+              <span className="text-xl">Student Profiles</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  )
 }
 
 export default Navigation
