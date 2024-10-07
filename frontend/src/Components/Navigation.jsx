@@ -1,9 +1,10 @@
 import React from "react"
-import '../App.css'
+import "../static/css/Navigation.css"
 import { FaGraduationCap } from "react-icons/fa"
 import { GoHomeFill } from "react-icons/go"
 import { FaList } from "react-icons/fa"
 import { ImProfile } from "react-icons/im"
+
 
 const Navigation = () => {
   return (
